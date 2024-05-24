@@ -1,10 +1,16 @@
-'use client'
-
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+const getInitialUserState = () => {
+    if (typeof window !== 'undefined') {
+        const storedUser = localStorage.getItem('user');
+        return storedUser ? JSON.parse(storedUser) : null;
+    }
+    return null;
+};
+
 const initialState = {
-    user: JSON.parse(localStorage.getItem('user')) || null,
+    user: getInitialUserState(), 
     token: null,
     loading: false,
     error: null,
@@ -62,6 +68,7 @@ const authSlice = createSlice({
             });
     },
 });
+
 
 export const { logout, addUser } = authSlice.actions;
 

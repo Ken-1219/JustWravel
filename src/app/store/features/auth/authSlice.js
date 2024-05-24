@@ -10,12 +10,11 @@ const getInitialUserState = () => {
 };
 
 const initialState = {
-    user: getInitialUserState(), 
+    user: getInitialUserState(),
     token: null,
     loading: false,
     error: null,
 };
-
 
 export const loginUser = createAsyncThunk(
     'auth/loginUser',
@@ -69,7 +68,13 @@ const authSlice = createSlice({
     },
 });
 
-
 export const { logout, addUser } = authSlice.actions;
 
 export default authSlice.reducer;
+
+export const getServerSideProps = async () => {
+    return {
+        props: {},
+        notFound: true,
+    };
+};

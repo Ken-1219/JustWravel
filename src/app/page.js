@@ -21,9 +21,7 @@ export default function Home() {
     }
   }, [user, router]);
 
-  if (!user) {
-    return <p className="text-center">Redirecting to login...</p>;
-  }
+
 
   return (
     <main className="min-h-screen">

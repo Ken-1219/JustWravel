@@ -1,3 +1,10 @@
+This is a landing page built on Next.js and TailwindCSS referred from [JustWravel](https://www.justwravel.com/) . The authentication has been built using [Dummy JSON Auth](https://dummyjson.com/docs/auth).
+For login use the following credentials: 
+-> username : emilys
+-> password : emilyspass
+or you can choose anything from this [Dummy Auth Users](https://dummyjson.com/users).
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
